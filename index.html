@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Prevent the error: GET http://localhost:5173/favicon.ico 404 (Not Found) -->
+        <link rel="icon" href="data:;base64,=" />
+        <title>High-Load Data Demo</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                line-height: 1.6;
+                padding: 1em;
+            }
+            #data-container li {
+                border-bottom: 1px solid #eee;
+                padding: 10px;
+                list-style-type: none;
+            }
+            #loader {
+                text-align: center;
+                padding: 20px;
+                font-style: italic;
+                display: none;
+            }
+            #status {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                background: #333;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 0.9em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>High-Load Data Demonstration</h1>
+        <p>
+            This demo simulates fetching and displaying a very large dataset.
+            Scroll down to load more items.
+        </p>
+
+        <input
+            type="search"
+            id="search-input"
+            placeholder="Search items by title..."
+            style="
+                width: 100%;
+                padding: 8px;
+                font-size: 1em;
+                margin-bottom: 1em;
+                box-sizing: border-box;
+            "
+        />
+
+        <ul id="data-container"></ul>
+
+        <div id="loader">Loading more items...</div>
+        <div id="status">Items: 0</div>
+
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>
