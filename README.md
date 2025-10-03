@@ -1,6 +1,6 @@
 # Highload Vanilla JS
 
-The project demonstrates how to use Vanilla JS for highload projects.
+The project demonstrates how to use Vanilla JS in order to work with a lot of data.
 
 ## Project Setup
 
